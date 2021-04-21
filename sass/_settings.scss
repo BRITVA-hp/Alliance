@@ -1,6 +1,40 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FC9B45 0%, #E48D3F 100%);
+    box-shadow: -1px 1px 2px rgba(194, 120, 53, 0.2), 
+                1px -1px 2px rgba(194, 120, 53, 0.2), 
+                -1px -1px 2px rgba(255, 176, 79, 0.9), 
+                1px 1px 3px rgba(194, 120, 53, 0.9), 
+                inset 1px 1px 2px rgba(255, 176, 79, 0.3), 
+                inset -1px -1px 2px rgba(194, 120, 53, 0.5);
+    border-radius: 10px;
+    padding: 17px 110px 17px 77px;
+    font-family: 'Roboto-Bold';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.3s;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background: transparent;
+        color: #DBAE84;
+    }
 }
 
 .text-hover {
