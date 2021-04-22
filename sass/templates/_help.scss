@@ -6,6 +6,13 @@
     padding-top: 170px;
     position: relative;
     z-index: 1;
+    &-bg {
+        background-color: #fff;
+        height: 120px;
+        background-image: url(../img/help/bgHelp.png);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+    }
     &__bg {
         position: absolute;
         right: 0;
