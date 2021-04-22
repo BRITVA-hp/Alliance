@@ -331,6 +331,13 @@ template {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Lora';
+  src: url("../fonts/Lora-Regular.woff") format("woff"), url("../fonts/Lora-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 .container {
   max-width: 1520px;
   margin: auto; }
@@ -351,6 +358,9 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+body {
+  background-color: #FBFBFB; }
 
 img {
   max-width: 100%;
@@ -376,6 +386,9 @@ img {
     background: transparent;
     color: #DBAE84; }
 
+.text--orange {
+  color: #F09442 !important; }
+
 .text-hover {
   transition: 0.3s; }
   .text-hover:hover {
@@ -388,6 +401,18 @@ a {
 .section {
   padding-left: 20px;
   padding-right: 20px; }
+  .section__title {
+    font-family: 'RobotoCondensed-Bold';
+    font-style: normal;
+    font-size: 45px;
+    line-height: 100%;
+    color: #85B657; }
+  .section__subtitle {
+    font-family: 'Lora';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 110.5%;
+    color: #474747; }
 
 .header {
   padding-top: 20px;
@@ -464,23 +489,20 @@ a {
     background: linear-gradient(135deg, #FC9B45 0%, #E48D3F 100%);
     box-shadow: 1px 1px 2px rgba(168, 104, 46, 0.2), -1px -1px 2px rgba(168, 104, 46, 0.2), -1px 1px 3px rgba(168, 104, 46, 0.9), inset -1px 1px 2px rgba(255, 192, 86, 0.3), inset 1px -1px 2px rgba(168, 104, 46, 0.5);
     border-radius: 10px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center; }
   .main__button-wrap {
     position: relative;
     display: inline-block;
-    cursor: pointer;
     display: flex;
     align-items: center; }
-    .main__button-wrap:hover .main__button {
-      background: transparent;
-      color: #DBAE84; }
   .main__button__money {
     position: absolute;
     left: 215px;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    cursor: pointer; }
   .main__ul {
     list-style-type: none;
     margin-bottom: 45px; }
@@ -544,11 +566,141 @@ a {
       right: 1%;
       transform: rotate(265deg); }
 
+.advantages {
+  background-color: #FBFBFB;
+  background-image: url(../img/adv/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: right;
+  padding-bottom: 330px;
+  padding-top: 20px;
+  position: relative;
+  background-size: cover; }
+  .advantages__money {
+    position: absolute; }
+    .advantages__money--1 {
+      bottom: 50px;
+      left: 31%; }
+    .advantages__money--2 {
+      right: 0;
+      top: 0; }
+  .advantages__row {
+    display: flex;
+    align-items: flex-start;
+    margin-left: -30px; }
+  .advantages__card {
+    width: 210px;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px; }
+    .advantages__card:last-of-type {
+      margin-right: 0; }
+    .advantages__card__text {
+      font-family: 'RobotoCondensed';
+      font-style: normal;
+      font-size: 20px;
+      line-height: 110%;
+      text-align: center;
+      color: #2F2F2F; }
+    .advantages__card__img {
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(249, 249, 249, 0.97);
+      box-shadow: -5px -5px 15px #FFFFFF, 5px 5px 15px #AFAFAF;
+      border-radius: 20px; }
+  .advantages__subtitle {
+    margin-bottom: 110px; }
+
+.registration {
+  position: relative;
+  margin-top: -110px;
+  padding-bottom: 55px; }
+  .registration__img {
+    position: absolute;
+    right: 0;
+    bottom: -545px; }
+    .registration__img--mobile {
+      position: absolute;
+      display: none; }
+  .registration__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+    row-gap: 30px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    max-width: 790px; }
+  .registration__card {
+    width: 385px;
+    height: 85px;
+    background: rgba(246, 246, 246, 0.8);
+    box-shadow: 1px 1px 2px rgba(182, 182, 182, 0.2), -1px -1px 2px rgba(182, 182, 182, 0.2), 1px -1px 2px rgba(255, 255, 255, 0.9), -1px 1px 3px rgba(182, 182, 182, 0.9), inset -1px 1px 2px rgba(255, 255, 255, 0.3), inset 1px -1px 2px rgba(182, 182, 182, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    padding-right: 20px; }
+    .registration__card__text {
+      font-family: 'RobotoCondensed';
+      font-style: normal;
+      font-size: 20px;
+      line-height: 110%;
+      color: #2F2F2F; }
+    .registration__card img {
+      margin-right: 15px; }
+  .registration__subtitle {
+    max-width: 240px;
+    margin-bottom: 55px; }
+
 @media screen and (max-width: 1750px) {
   .main__money--1 {
     top: 20px; } }
 
+@media screen and (max-width: 1500px) {
+  .registration__img {
+    width: 500px;
+    bottom: -450px; } }
+
+@media screen and (max-width: 1400px) {
+  .registration {
+    margin-top: -50px; }
+    .registration__img {
+      width: 400px;
+      bottom: -330px; }
+  .advantages {
+    padding-bottom: 200px;
+    background-position-y: 50px;
+    background-position-x: 50px; } }
+
 @media screen and (max-width: 1250px) {
+  .registration {
+    padding-bottom: 35px; }
+    .registration__img {
+      width: 300px;
+      bottom: -240px; }
+  .advantages__row {
+    margin-left: -20px; }
+  .advantages__card {
+    width: 170px;
+    height: 190px; }
+    .advantages__card__img {
+      width: 130px;
+      height: 130px; }
+      .advantages__card__img img {
+        width: 70px; }
+    .advantages__card__text {
+      font-size: 16px; }
+  .advantages__subtitle {
+    margin-bottom: 75px; }
+  .section__title {
+    font-size: 36px; }
+  .section__subtitle {
+    font-size: 25px; }
   .main {
     padding-top: 100px;
     padding-bottom: 100px; }
@@ -581,10 +733,59 @@ a {
   .header__logo--desc {
     width: 200px; } }
 
+@media screen and (max-width: 1100px) {
+  .registration {
+    margin-top: -105px; }
+    .registration__img {
+      width: 185px;
+      bottom: -120px; } }
+
 @media screen and (max-width: 992px) {
+  .registration {
+    padding-bottom: 20px; }
+    .registration__box {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-gap: 20px;
+      max-width: 580px; }
+    .registration__card {
+      width: 280px;
+      height: 60px;
+      padding-left: 30px;
+      padding-right: 10px; }
+      .registration__card__img {
+        width: 40px; }
+      .registration__card__text {
+        font-size: 14px; }
+    .registration__subtitle {
+      margin-bottom: 25px; }
+    .registration__img--mobile {
+      display: block;
+      right: 0;
+      top: -10px; }
+  .advantages {
+    background-position-x: calc(100% + 170px); }
+    .advantages__subtitle {
+      margin-bottom: 40px; }
+    .advantages__row {
+      margin-left: 0;
+      flex-wrap: wrap;
+      max-width: 400px;
+      justify-content: space-between; }
+    .advantages__card {
+      margin-right: 0;
+      margin-bottom: 40px;
+      width: 150px; }
+      .advantages__card__text {
+        font-size: 14px; }
+  .section__title {
+    font-size: 28px; }
+  .section__subtitle {
+    font-size: 20px; }
   .main {
     padding-top: 25px;
     padding-bottom: 100px; }
+    .main__tel {
+      display: flex; }
     .main__li {
       font-size: 16px;
       margin-bottom: 5px; }
@@ -638,6 +839,16 @@ a {
       display: block; } }
 
 @media screen and (max-width: 767px) {
+  .registration {
+    margin-top: -50px; }
+    .registration__img {
+      display: none; }
+  .advantages {
+    background-image: url(../img/adv/bgMobile.png);
+    background-position: center;
+    padding-bottom: 90px; }
+    .advantages__money {
+      display: none; }
   .main {
     background-position-x: 50px;
     padding-bottom: 25px; }
@@ -651,8 +862,17 @@ a {
     background-size: 500px; } }
 
 @media screen and (max-width: 575px) {
+  .registration__card__text {
+    max-width: 150px; }
+  .advantages {
+    background-position-x: calc(100% + 200px); }
+    .advantages__row {
+      max-width: 320px; }
+    .advantages__card {
+      width: 130px; }
   .main {
-    background-image: url(../img/main/bgMobile.png); }
+    background-image: url(../img/main/bgMobile.png);
+    background-position-y: 230px; }
     .main__girl {
       display: block;
       left: 7%;

@@ -7,7 +7,66 @@
         }
     }
 }
+@media screen and ( max-width:  1500px) {
+    .registration {
+        &__img {
+            width: 500px;
+            bottom: -450px;
+        }
+    }
+}
+@media screen and ( max-width:  1400px) {
+    .registration {
+        margin-top: -50px;
+        &__img {
+            width: 400px;
+            bottom: -330px;
+        }
+    }
+    .advantages {
+        padding-bottom: 200px;
+        background-position-y: 50px;
+        background-position-x: 50px;
+    }
+}
 @media screen and ( max-width:  1250px) {
+    .registration {
+        padding-bottom: 35px;
+        &__img {
+            width: 300px;
+            bottom: -240px;
+        }
+    }
+    .advantages {
+        &__row {
+            margin-left: -20px;
+        }
+        &__card {
+            width: 170px;
+            height: 190px;
+            &__img {
+                width: 130px;
+                height: 130px;
+                img {
+                    width: 70px;
+                }
+            }
+            &__text {
+                font-size: 16px;
+            }
+        }
+        &__subtitle {
+            margin-bottom: 75px;
+        }
+    }
+    .section {
+        &__title {
+            font-size: 36px;
+        }
+        &__subtitle {
+            font-size: 25px;
+        }
+    }
     .main {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -66,10 +125,80 @@
 
 }
 
+@media screen and ( max-width:  1100px) {
+    .registration {
+        margin-top: -105px;
+        &__img {
+            width: 185px;
+            bottom: -120px;
+        }
+    }
+}
 @media screen and ( max-width:  992px) {
+    .registration {
+        padding-bottom: 20px;
+        &__box {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 20px;
+            max-width: 580px;
+        }
+        &__card {
+            width: 280px;
+            height: 60px;
+            padding-left: 30px;
+            padding-right: 10px;
+            &__img {
+                width: 40px;
+            }
+            &__text {
+                font-size: 14px;
+            }
+        }
+        &__subtitle {
+            margin-bottom: 25px;
+        }
+        &__img {
+            &--mobile {
+                display: block;
+                right: 0;
+                top: -10px;
+            }
+        }
+    }
+    .advantages {
+        background-position-x: calc(100% + 170px);
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        &__row {
+            margin-left: 0;
+            flex-wrap: wrap;
+            max-width: 400px;
+            justify-content: space-between;
+        }
+        &__card {
+            margin-right: 0;
+            margin-bottom: 40px;
+            width: 150px;
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
+    .section {
+        &__title {
+            font-size: 28px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+    }
     .main {
         padding-top: 25px;
         padding-bottom: 100px;
+        &__tel {
+            display: flex;
+        }
         &__li {
             font-size: 16px;
             margin-bottom: 5px;
@@ -150,6 +279,20 @@
 }
 
 @media screen and ( max-width:  767px) {
+    .registration {
+        margin-top: -50px;
+        &__img {
+            display: none;
+        }
+    }
+    .advantages {
+        background-image: url(../img/adv/bgMobile.png);
+        background-position: center;
+        padding-bottom: 90px;
+        &__money {
+            display: none;
+        }
+    }
     .main {
         background-position-x: 50px;
         padding-bottom: 25px;
@@ -169,8 +312,25 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .registration {
+        &__card {
+            &__text {
+                max-width: 150px;
+            }
+        }
+    }
+    .advantages {
+        background-position-x: calc(100% + 200px);
+        &__row {
+            max-width: 320px;
+        }
+        &__card {
+            width: 130px;
+        }
+    }
     .main {
         background-image: url(../img/main/bgMobile.png);
+        background-position-y: 230px;
         &__girl {
             display: block;
             left: 7%;
