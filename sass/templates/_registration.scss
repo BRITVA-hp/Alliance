@@ -6,6 +6,7 @@
         position: absolute;
         right: 0;
         bottom: -545px;
+        z-index: 2;
         &--mobile {
             position: absolute;
             display: none;

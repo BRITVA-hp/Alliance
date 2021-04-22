@@ -8,6 +8,12 @@
     }
 }
 @media screen and ( max-width:  1500px) {
+    .help {
+        &__butterflies {
+            width: 455px;
+            right: 0;
+        }
+    }
     .registration {
         &__img {
             width: 500px;
@@ -30,6 +36,40 @@
     }
 }
 @media screen and ( max-width:  1250px) {
+    .help {
+        padding-top: 110px;
+        &__butterflies {
+            top: 225px;
+        }
+        &__money {
+            width: 180px;
+            top: -75px;
+        }
+        &__box {
+            padding-left: 45px;
+            width: 720px;
+            height: 360px;
+            &__img {
+                width: 240px;
+            }
+        }
+        &__tel {
+            max-width: 300px;
+            &__img {
+                width: 28px;
+                height: 28px;
+            }
+            &__text {
+                font-size: 22px;
+            }
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 22px;
+        }
+    }
     .registration {
         padding-bottom: 35px;
         &__img {
@@ -126,6 +166,11 @@
 }
 
 @media screen and ( max-width:  1100px) {
+    .help {
+        &__butterflies {
+            width: 330px;
+        }
+    }
     .registration {
         margin-top: -105px;
         &__img {
@@ -135,6 +180,42 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .help {
+        &__butterflies {
+            top: 145px;
+        }
+        &__money {
+            width: 90px;
+            top: -40px;
+        }
+        &__box {
+            padding-left: 25px;
+            padding-right: 25px;
+            width: 470px;
+            height: 280px;
+            justify-content: space-between;
+            &__img {
+                width: 130px;
+            }
+        }
+        &__tel {
+            max-width: 250px;
+            &__img {
+                width: 22px;
+                height: 22px;
+            }
+            &__text {
+                font-size: 18px;
+            }
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__text {
+            font-size: 18px;
+            max-width: 255px;
+        }
+    }
     .registration {
         padding-bottom: 20px;
         &__box {
@@ -279,6 +360,23 @@
 }
 
 @media screen and ( max-width:  767px) {
+    .help {
+        padding: 0;
+        &__container {
+            padding: 50px 20px;
+            background-image: url(../img/help/bgMobile.png);
+            background-repeat: no-repeat;
+            background-position-y: top;
+            background-position-x: center;
+            background-size: cover;
+        }
+        &__box {
+            margin: auto;
+        }
+        &__butterflies {
+            display: none;
+        }
+    }
     .registration {
         margin-top: -50px;
         &__img {
@@ -312,6 +410,41 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .help {
+        &__bg {
+            display: block;
+        }
+        &__box {
+            width: auto;
+            height: auto;
+            padding: 30px 20px 10px 20px;
+            max-width: 365px;
+            position: relative;
+            &__img {
+                width: 80px;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-40%);
+            }
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__text {
+            font-size: 14px;
+            max-width: 180px;
+        }
+        &__tel {
+            max-width: 215px;
+            &__text {
+                font-size: 15px;
+            }
+        }
+    }
     .registration {
         &__card {
             &__text {

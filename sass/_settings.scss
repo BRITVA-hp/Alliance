@@ -42,6 +42,9 @@ img {
 }
 
 .text {
+    &--green {
+        color: #85B657;
+    }
     &--orange {
         color: #F09442 !important;
     }
@@ -49,7 +52,6 @@ img {
         transition: 0.3s;
         &:hover {
             opacity: 0.7;
-            text-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
         }
     }
 }
