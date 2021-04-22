@@ -304,6 +304,13 @@ template {
   font-display: swap; }
 
 @font-face {
+  font-family: 'Roboto-900';
+  src: url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
   font-family: 'Roboto-500';
   src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
   font-weight: normal;
@@ -799,6 +806,72 @@ a {
   .choice__subtitle {
     margin-bottom: 85px; }
 
+.step {
+  position: relative; }
+  .step__but {
+    position: absolute;
+    display: none; }
+  .step__row {
+    justify-content: flex-start; }
+  .step__subtitle {
+    margin-bottom: 30px; }
+  .step__card {
+    padding-right: 20px;
+    margin-right: 20px;
+    width: 385px;
+    height: 150px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px 1px 2px rgba(161, 161, 161, 0.2), inset 1px -1px 2px rgba(161, 161, 161, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 0.9), inset 1px 1px 3px rgba(161, 161, 161, 0.9);
+    border-radius: 20px; }
+    .step__card--1 {
+      grid-area: stepCard1; }
+    .step__card--2 {
+      grid-area: stepCard2; }
+    .step__card--3 {
+      grid-area: stepCard3; }
+    .step__card:last-of-type {
+      margin-right: 0; }
+    .step__card__text {
+      font-family: 'RobotoCondensed-300';
+      font-style: normal;
+      font-size: 18px;
+      line-height: 110%;
+      color: #474747; }
+    .step__card__title {
+      font-family: 'RobotoCondensed-Bold';
+      font-style: normal;
+      font-size: 18px;
+      line-height: 100%;
+      color: #474747;
+      margin-bottom: 12px; }
+    .step__card__wrap {
+      transform: translateX(-15px); }
+    .step__card__box {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 20px; }
+    .step__card__number {
+      font-family: 'Roboto-900';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 170px;
+      line-height: 100%;
+      color: #F09442;
+      opacity: 0.2;
+      transform: translate(-11px, 5px); }
+  .step__arrow {
+    position: absolute; }
+    .step__arrow--1 {
+      right: -85px;
+      top: -34px; }
+    .step__arrow--2 {
+      right: -110px;
+      bottom: -72px; }
+
 @media screen and (max-width: 1750px) {
   .main__money--1 {
     top: 20px; } }
@@ -823,6 +896,27 @@ a {
     background-position-x: 50px; } }
 
 @media screen and (max-width: 1250px) {
+  .step__arrow--1 {
+    width: 80px;
+    right: -68px;
+    top: -29px; }
+  .step__arrow--2 {
+    width: 130px;
+    right: -103px;
+    bottom: -62px; }
+  .step__card {
+    width: 280px;
+    height: 110px; }
+    .step__card__wrap {
+      transform: none;
+      margin-left: -26px; }
+    .step__card__number {
+      font-size: 144px; }
+    .step__card__title {
+      font-size: 14px;
+      margin-bottom: 5px; }
+    .step__card__text {
+      font-size: 14px; }
   .choice__subtitle {
     margin-bottom: 65px; }
   .choice__box {
@@ -927,6 +1021,23 @@ a {
       bottom: -120px; } }
 
 @media screen and (max-width: 992px) {
+  .step {
+    padding-top: 80px; }
+    .step__but {
+      display: block;
+      right: 0;
+      top: 0; }
+    .step__arrow {
+      display: none; }
+    .step__card {
+      margin-right: 0; }
+    .step__row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: 'stepCard1 stepCard1 . .' '. stepCard2 stepCard2 .' '. . stepCard3 stepCard3';
+      max-width: 560px;
+      row-gap: 20px; }
   .choice {
     padding-bottom: 30px;
     background-image: none;
@@ -1077,6 +1188,10 @@ a {
       display: block; } }
 
 @media screen and (max-width: 767px) {
+  .step__row {
+    grid-template: repeat(3, 1fr)/repeat(6, 1fr);
+    grid-template-areas: 'stepCard1 stepCard1 stepCard1 stepCard1 . .' '. stepCard2 stepCard2 stepCard2 stepCard2 .' '. . stepCard3 stepCard3 stepCard3 stepCard3';
+    max-width: 420px; }
   .help {
     padding: 0; }
     .help-bg {
@@ -1090,8 +1205,6 @@ a {
       background-position-y: top;
       background-position-x: center;
       background-size: cover; }
-    .help__box {
-      margin: auto; }
     .help__butterflies {
       display: none; }
   .registration {
@@ -1117,6 +1230,11 @@ a {
     background-size: 500px; } }
 
 @media screen and (max-width: 575px) {
+  .step__but {
+    top: -40px; }
+  .step__row {
+    grid-template: repeat(3, 1fr)/1fr;
+    grid-template-areas: 'stepCard1' 'stepCard2' 'stepCard3'; }
   .choice__but--1 {
     right: -45px;
     top: 35px; }

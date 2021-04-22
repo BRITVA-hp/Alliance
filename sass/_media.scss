@@ -36,6 +36,38 @@
     }
 }
 @media screen and ( max-width:  1250px) {
+    .step {
+        &__arrow {
+            &--1 {
+                width: 80px;
+                right: -68px;
+                top: -29px;
+            }
+            &--2 {
+                width: 130px;
+                right: -103px;
+                bottom: -62px;
+            }
+        }
+        &__card {
+            width: 280px;
+            height: 110px;
+            &__wrap {
+                transform: none;
+                margin-left: -26px;
+            }
+            &__number {
+                font-size: 144px;
+            }
+            &__title {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
     .choice {
         &__subtitle {
             margin-bottom: 65px;
@@ -202,6 +234,32 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .step {
+        padding-top: 80px;
+        &__but {
+            display: block;
+            right: 0;
+            top: 0;
+        }
+        &__arrow {
+            display: none;
+        }
+        &__card {
+            margin-right: 0;
+        }
+        &__row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+                'stepCard1 stepCard1 . .'
+                '. stepCard2 stepCard2 .'
+                '. . stepCard3 stepCard3'
+            ;
+            max-width: 560px;
+            row-gap: 20px;
+        }
+    }
     .choice {
         padding-bottom: 30px;
         background-image: none;
@@ -419,6 +477,17 @@
 }
 
 @media screen and ( max-width:  767px) {
+    .step {
+        &__row {
+            grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+            grid-template-areas: 
+                'stepCard1 stepCard1 stepCard1 stepCard1 . .'
+                '. stepCard2 stepCard2 stepCard2 stepCard2 .'
+                '. . stepCard3 stepCard3 stepCard3 stepCard3'
+            ;
+            max-width: 420px;
+        }
+    }
     .help {
         padding: 0;
         &-bg {
@@ -434,9 +503,6 @@
             background-position-y: top;
             background-position-x: center;
             background-size: cover;
-        }
-        &__box {
-            margin: auto;
         }
         &__butterflies {
             display: none;
@@ -475,6 +541,19 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .step {
+        &__but {
+            top: -40px;
+        }
+        &__row {
+            grid-template: repeat(3, 1fr) / 1fr;
+            grid-template-areas: 
+                'stepCard1'
+                'stepCard2'
+                'stepCard3'
+            ;
+        }
+    }
     .choice {
         &__but {
             &--1 {
