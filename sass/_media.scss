@@ -35,7 +35,30 @@
         background-position-x: 50px;
     }
 }
+@media screen and ( max-width:  1350px) {
+    .we {
+        &__text {
+            font-size: 20px;
+            max-width: 550px;
+        }
+    }
+    
+}
 @media screen and ( max-width:  1250px) {
+    .we {
+        padding-top: 100px;
+        &__but {
+            display: block;
+            right: 20%;
+            top: 30%;
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
     .step {
         &__arrow {
             &--1 {
@@ -234,6 +257,27 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .we {
+        padding-top: 50px;
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 14px;
+            max-width: 385px;
+        }
+        &__money {
+            display: none;
+            &--mob {
+                display: block;
+                right: 30px;
+                top: 25px;
+            }
+        }
+        &__but {
+            right: 20px;
+        }
+    }
     .step {
         padding-top: 80px;
         &__but {
@@ -477,6 +521,30 @@
 }
 
 @media screen and ( max-width:  767px) {
+    .we {
+        padding-left: 0;
+        padding-right: 0;
+        &__row {
+            &--cert {
+                width: 660px;
+                justify-content: flex-start;
+            }
+        }
+        &__but {
+            right: 0;
+            top: 100%;
+        }
+        &__wrap {
+            padding-left: 20px;
+        }
+        &__title, &__subtitle {
+            padding: 0 20px;
+        }
+        &__text {
+            padding: 0 20px;
+            max-width: 425px;
+        }
+    }
     .step {
         &__row {
             grid-template: repeat(3, 1fr) / repeat(6, 1fr);
@@ -533,6 +601,16 @@
     }
 }
 
+@media screen and ( max-width:  680px) {
+    .we {
+        &__wrap {
+            margin-bottom: 15px;
+        }
+        &__left {
+            display: flex;
+        }
+    }
+}
 @media screen and ( max-width:  650px) {
     .main {
         background-position-x: 100px;
