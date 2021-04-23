@@ -29,6 +29,12 @@
     }
 }
 @media screen and ( max-width:  1400px) {
+    .faq {
+        &__container {
+            background-size: 600px;
+            padding-bottom: 40px;
+        }
+    }
     .registration {
         margin-top: -50px;
         &__img {
@@ -57,6 +63,21 @@
     
 }
 @media screen and ( max-width:  1250px) {
+    .faq {
+        &__container {
+            background-size: 500px;
+            padding-bottom: 0;
+        }
+        &__item {
+            width: 435px;
+            &__title {
+                font-size: 16px;
+            }
+            &__text {
+                font-size: 16px;
+            }
+        }
+    }
     .comparison {
         padding-bottom: 40px;
         &__money {
@@ -353,6 +374,25 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .faq {
+        &__item {
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 280px;
+            &__title {
+                font-size: 14px;
+            }
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
+    .faq {
+        &__container {
+            background-size: 400px;
+            background-position-y: 130px;
+        }
+    }
     .comparison {
         &__title {
             margin-bottom: 30px;
@@ -625,6 +665,11 @@
 }
 
 @media screen and ( max-width:  767px) {
+    .faq {
+        &__container {
+            background-size: 300px;
+        }
+    }
     .comparison {
         background-image: none;
         &__money {
@@ -743,6 +788,11 @@
     }
 }
 @media screen and ( max-width:  650px) {
+    .faq {
+        &__container {
+            background-size: 250px;
+        }
+    }
     .main {
         background-position-x: 100px;
         padding-bottom: 25px;
@@ -750,12 +800,18 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .faq {
+        &__container {
+            background-image: none;
+        }
+    }
     .comparison {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 20px;
         &__but {
-            top: 95%;
+            top: 93%;
+            right: 0;
         }
         &__title {
             padding-left: 20px;
