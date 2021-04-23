@@ -8,6 +8,13 @@
     }
 }
 @media screen and ( max-width:  1500px) {
+    .comparison {
+        &__img {
+            width: 400px;
+            right: 50px;
+            left: auto;
+        }
+    }
     .help {
         &__butterflies {
             width: 455px;
@@ -36,6 +43,11 @@
     }
 }
 @media screen and ( max-width:  1350px) {
+    .comparison {
+        &__img {
+            width: 300px;
+        }
+    }
     .we {
         &__text {
             font-size: 20px;
@@ -45,8 +57,92 @@
     
 }
 @media screen and ( max-width:  1250px) {
+    .comparison {
+        padding-bottom: 40px;
+        &__money {
+            &--2 {
+                width: 90px;
+            }
+            &--1 {
+                width: 90px;
+                left: 45%;
+            }
+        }
+        &__row {
+            &--item {
+                margin-bottom: 15px;
+                justify-content: space-between;
+                &--last {
+                    width: 100%;
+                }
+            }
+        }
+        &__card {
+            width: 320px;
+            padding: 20px;
+            height: 430px;
+            &__wrap {
+                width: 100%;
+            }
+            &__marker {
+                background: linear-gradient(135deg, #FFFFFF 0%, #E8E8E8 100%);
+                box-shadow: -19px 19px 38px rgba(188, 188, 188, 0.2), 
+                            19px -19px 38px rgba(188, 188, 188, 0.2), 
+                            -19px -19px 38px rgba(255, 255, 255, 0.9), 
+                            19px 19px 48px rgba(188, 188, 188, 0.9), 
+                            inset 1px 1px 2px rgba(255, 255, 255, 0.3), 
+                            inset -1px -1px 2px rgba(188, 188, 188, 0.5);
+            }
+            &__li {
+                margin-bottom: 10px;
+            }
+            &__box {
+                width: 130px;
+                height: 35px;
+                &--last {
+                    font-size: 12px;
+                    width: calc(100% + 20px);
+                    height: 45px;
+                    margin-left: -20px;
+                    padding-left: 20px;
+                }
+                &__text {
+                    font-size: 14px;
+                    span {
+                        &:last-of-type {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+            &__item {
+                margin-right: 20px;
+                &__title {
+                    font-size: 11px;
+                }
+            }
+            &__li {
+                font-size: 14px;
+            }
+            &__title {
+                font-size: 16px;
+                padding: 10px 35px 10px 20px;
+                display: inline-block;
+                margin-bottom: 15px;
+                transform: none;
+                margin-left: -20px;
+                padding: 10px 20px;
+            }
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+    }
     .we {
         padding-top: 100px;
+        &__wrap {
+            width: 100%;
+        }
         &__but {
             display: block;
             right: 20%;
@@ -257,6 +353,14 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .comparison {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__img {
+            display: none;
+        }
+    }
     .we {
         padding-top: 50px;
         &__subtitle {
@@ -521,6 +625,33 @@
 }
 
 @media screen and ( max-width:  767px) {
+    .comparison {
+        background-image: none;
+        &__money {
+            &--1 {
+                display: none;
+            }
+            &--2 {
+                bottom: 400px;
+                left: 185px;
+            }
+        }
+        &__but {
+            display: block;
+            right: 20px;
+            top: 40%;
+        }
+        &__card {
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &__box {
+            flex-direction: column;
+        }
+    }
     .we {
         padding-left: 0;
         padding-right: 0;
@@ -619,6 +750,26 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .comparison {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+        &__but {
+            top: 95%;
+        }
+        &__title {
+            padding-left: 20px;
+            max-width: 260px;
+        }
+        &__subtitle {
+            padding-left: 20px;
+            max-width: 255px;
+        }
+        &__card {
+            box-shadow: none;
+            background: #FBFBFB;
+        }
+    }
     .step {
         &__but {
             top: -40px;

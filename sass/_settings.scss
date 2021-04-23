@@ -13,6 +13,14 @@ img {
     height: auto;
 }
 
+ul {
+    list-style-type: none;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
 .button {
     border: none;
     cursor: pointer;

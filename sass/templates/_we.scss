@@ -1,6 +1,7 @@
 .we {
     padding-top: 150px;
     position: relative;
+    margin-bottom: 130px;
     &__left {
         display: none;
         align-items: center;
@@ -23,7 +24,6 @@
     }
     &__wrap {
         overflow-x: auto;
-        width: 100%;
     }
     &__row {
         &--cert {
@@ -33,6 +33,7 @@
     &__but {
         position: absolute;
         display: none;
+        z-index: 5;
     }
     &__money {
         position: absolute;

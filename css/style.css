@@ -345,6 +345,13 @@ template {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Lora-500';
+  src: url("../fonts/Lora-Medium.woff") format("woff"), url("../fonts/Lora-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 .container {
   max-width: 1520px;
   margin: auto; }
@@ -360,6 +367,10 @@ template {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+  .row--jstart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; }
 
 * {
   margin: 0;
@@ -372,6 +383,12 @@ body {
 img {
   max-width: 100%;
   height: auto; }
+
+ul {
+  list-style-type: none; }
+
+.pos-abs {
+  position: absolute; }
 
 .button {
   border: none;
@@ -874,7 +891,8 @@ a {
 
 .we {
   padding-top: 150px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 130px; }
   .we__left {
     display: none;
     align-items: center;
@@ -889,13 +907,13 @@ a {
     .we__left__img img:last-of-type {
       margin-left: -5px; }
   .we__wrap {
-    overflow-x: auto;
-    width: 100%; }
+    overflow-x: auto; }
   .we__row--cert {
     width: 640px; }
   .we__but {
     position: absolute;
-    display: none; }
+    display: none;
+    z-index: 5; }
   .we__money {
     position: absolute;
     bottom: -110px;
@@ -918,11 +936,148 @@ a {
     .we__img:last-of-type {
       margin-right: 0; }
 
+.comparison {
+  padding-bottom: 85px;
+  background-image: url(../img/comparison/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  background-position-y: 60px; }
+  .comparison__but {
+    display: none; }
+  .comparison__money--1 {
+    z-index: 5;
+    left: 40%;
+    top: 0px; }
+  .comparison__money--2 {
+    z-index: 5;
+    bottom: -50px;
+    left: 20px; }
+  .comparison__img {
+    z-index: 3;
+    bottom: 5px;
+    left: 57%; }
+  .comparison__bg--top {
+    left: 0;
+    top: 60px;
+    z-index: 1; }
+  .comparison__bg--bot {
+    bottom: 0;
+    left: 0;
+    z-index: 4; }
+  .comparison__container {
+    position: relative;
+    z-index: 2; }
+  .comparison__box {
+    display: flex; }
+  .comparison__row--item {
+    margin-bottom: 10px; }
+  .comparison__title {
+    margin-bottom: 70px; }
+  .comparison__card {
+    margin-right: 20px;
+    width: 516px;
+    height: 516px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(166, 166, 166, 0.5), inset -1px 1px 2px rgba(166, 166, 166, 0.2), inset 1px -1px 2px rgba(166, 166, 166, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 0.9), inset 1px 1px 3px rgba(166, 166, 166, 0.9);
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .comparison__card:last-of-type {
+      margin-right: 0; }
+    .comparison__card__box {
+      background: #FFFFFF;
+      box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(199, 199, 199, 0.5), inset -1px 1px 2px rgba(199, 199, 199, 0.2), inset 1px -1px 2px rgba(199, 199, 199, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 0.9), inset 1px 1px 3px rgba(199, 199, 199, 0.9);
+      border-radius: 5px;
+      padding-left: 15px;
+      width: 150px;
+      height: 45px;
+      display: flex;
+      align-items: center; }
+      .comparison__card__box--last {
+        width: 350px;
+        font-family: 'Lora-500';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 110%;
+        height: 50px; }
+      .comparison__card__box__text {
+        display: flex;
+        align-items: center;
+        font-family: 'RobotoCondensed';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 110%;
+        color: #474747; }
+        .comparison__card__box__text span {
+          display: inline-block; }
+          .comparison__card__box__text span:first-of-type {
+            margin-right: 5px;
+            font-family: 'RobotoCondensed-Bold'; }
+          .comparison__card__box__text span:last-of-type {
+            max-width: 100px; }
+    .comparison__card__item {
+      margin-right: 50px; }
+      .comparison__card__item:last-of-type {
+        margin-right: 0; }
+      .comparison__card__item__title {
+        font-family: 'Lora';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 110%;
+        -webkit-text-decoration-line: underline;
+        text-decoration-line: underline;
+        margin-bottom: 10px; }
+    .comparison__card__title {
+      font-family: 'RobotoCondensed';
+      font-style: normal;
+      font-size: 20px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: #474747;
+      background: linear-gradient(135deg, #EDEDED 0%, #FFFFFF 100%);
+      box-shadow: -3px 3px 6px rgba(216, 216, 216, 0.2), inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+      border-radius: 0px 6px 6px 0px;
+      padding: 20px 80px 20px 35px;
+      transform: translateX(-35px);
+      margin-bottom: 25px; }
+    .comparison__card__li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      font-family: 'RobotoCondensed-300';
+      font-style: normal;
+      font-size: 18px;
+      line-height: 110%;
+      color: #2F2F2F; }
+      .comparison__card__li:last-of-type {
+        margin-bottom: 0; }
+    .comparison__card__marker {
+      width: 17px;
+      min-width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #E8E8E8 0%, #FFFFFF 100%);
+      box-shadow: -1px 1px 2px rgba(242, 242, 242, 0.2), 1px -1px 2px rgba(242, 242, 242, 0.2), -1px -1px 2px rgba(246, 246, 246, 0.9), 1px 1px 3px rgba(242, 242, 242, 0.9), inset 1px 1px 2px rgba(246, 246, 246, 0.3), inset -1px -1px 2px rgba(242, 242, 242, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px; }
+
 @media screen and (max-width: 1750px) {
   .main__money--1 {
     top: 20px; } }
 
 @media screen and (max-width: 1500px) {
+  .comparison__img {
+    width: 400px;
+    right: 50px;
+    left: auto; }
   .help__butterflies {
     width: 455px;
     right: 0; }
@@ -942,13 +1097,69 @@ a {
     background-position-x: 50px; } }
 
 @media screen and (max-width: 1350px) {
+  .comparison__img {
+    width: 300px; }
   .we__text {
     font-size: 20px;
     max-width: 550px; } }
 
 @media screen and (max-width: 1250px) {
+  .comparison {
+    padding-bottom: 40px; }
+    .comparison__money--2 {
+      width: 90px; }
+    .comparison__money--1 {
+      width: 90px;
+      left: 45%; }
+    .comparison__row--item {
+      margin-bottom: 15px;
+      justify-content: space-between; }
+      .comparison__row--item--last {
+        width: 100%; }
+    .comparison__card {
+      width: 320px;
+      padding: 20px;
+      height: 430px; }
+      .comparison__card__wrap {
+        width: 100%; }
+      .comparison__card__marker {
+        background: linear-gradient(135deg, #FFFFFF 0%, #E8E8E8 100%);
+        box-shadow: -19px 19px 38px rgba(188, 188, 188, 0.2), 19px -19px 38px rgba(188, 188, 188, 0.2), -19px -19px 38px rgba(255, 255, 255, 0.9), 19px 19px 48px rgba(188, 188, 188, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(188, 188, 188, 0.5); }
+      .comparison__card__li {
+        margin-bottom: 10px; }
+      .comparison__card__box {
+        width: 130px;
+        height: 35px; }
+        .comparison__card__box--last {
+          font-size: 12px;
+          width: calc(100% + 20px);
+          height: 45px;
+          margin-left: -20px;
+          padding-left: 20px; }
+        .comparison__card__box__text {
+          font-size: 14px; }
+          .comparison__card__box__text span:last-of-type {
+            font-size: 11px; }
+      .comparison__card__item {
+        margin-right: 20px; }
+        .comparison__card__item__title {
+          font-size: 11px; }
+      .comparison__card__li {
+        font-size: 14px; }
+      .comparison__card__title {
+        font-size: 16px;
+        padding: 10px 35px 10px 20px;
+        display: inline-block;
+        margin-bottom: 15px;
+        transform: none;
+        margin-left: -20px;
+        padding: 10px 20px; }
+    .comparison__title {
+      margin-bottom: 50px; }
   .we {
     padding-top: 100px; }
+    .we__wrap {
+      width: 100%; }
     .we__but {
       display: block;
       right: 20%;
@@ -1082,6 +1293,10 @@ a {
       bottom: -120px; } }
 
 @media screen and (max-width: 992px) {
+  .comparison__title {
+    margin-bottom: 30px; }
+  .comparison__img {
+    display: none; }
   .we {
     padding-top: 50px; }
     .we__subtitle {
@@ -1264,6 +1479,24 @@ a {
       display: block; } }
 
 @media screen and (max-width: 767px) {
+  .comparison {
+    background-image: none; }
+    .comparison__money--1 {
+      display: none; }
+    .comparison__money--2 {
+      bottom: 400px;
+      left: 185px; }
+    .comparison__but {
+      display: block;
+      right: 20px;
+      top: 40%; }
+    .comparison__card {
+      margin-right: 0;
+      margin-bottom: 20px; }
+      .comparison__card:last-of-type {
+        margin-bottom: 0; }
+    .comparison__box {
+      flex-direction: column; }
   .we {
     padding-left: 0;
     padding-right: 0; }
@@ -1328,6 +1561,21 @@ a {
     background-size: 500px; } }
 
 @media screen and (max-width: 575px) {
+  .comparison {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px; }
+    .comparison__but {
+      top: 95%; }
+    .comparison__title {
+      padding-left: 20px;
+      max-width: 260px; }
+    .comparison__subtitle {
+      padding-left: 20px;
+      max-width: 255px; }
+    .comparison__card {
+      box-shadow: none;
+      background: #FBFBFB; }
   .step__but {
     top: -40px; }
   .step__row {
