@@ -3,7 +3,7 @@
     &__container {
         background-image: url(../img/faq/img.png);
         background-repeat: no-repeat;
-        background-position-y: bottom;
+        background-position-y: 80px;
         background-position-x: right;
         padding-bottom: 120px;
     }
@@ -37,6 +37,38 @@
                         inset -2px -2px 4px rgba(255, 255, 255, 0.9), 
                         inset 2px 2px 5px rgba(201, 201, 201, 0.9);
         }
+        &--active {
+            box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), 
+                        -1px -1px 2px rgba(201, 201, 201, 0.5), 
+                        inset -2px 2px 4px rgba(201, 201, 201, 0.2), 
+                        inset 2px -2px 4px rgba(201, 201, 201, 0.2), 
+                        inset -2px -2px 4px rgba(255, 255, 255, 0.9), 
+                        inset 2px 2px 5px rgba(201, 201, 201, 0.9);
+            .faq__item__arrow {
+                transform: rotateX(180deg);
+            }
+        }
+        &__arrow {
+            position: relative;
+            min-width: 16px;
+            width: 16px;
+            height: 11px;
+            transition: 0.5s;
+            perspective: 100px;
+            &--bot {
+                position: absolute;
+                left: 0;
+                top: 0;
+                backface-visibility: hidden;
+            }
+            &--top {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotateY(180deg);
+                backface-visibility: hidden;
+            }
+        }
         &__text {
             font-family: 'RobotoCondensed-300';
             font-style: normal;
@@ -61,12 +93,7 @@
             display: flex;
             align-items: flex-start;
             max-height: 0px;
-        }
-        &__arrow {
-            min-width: 20px;
-            &--top {
-                display: none;
-            }
+            transition: 0.5s;
         }
         &__header {
             display: flex;

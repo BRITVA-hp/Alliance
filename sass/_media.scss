@@ -1,4 +1,10 @@
 @media screen and ( max-width:  1750px) {
+    .review {
+        &__but {
+            width: 500px;
+            right: 45px;
+        }
+    }
     .main {
         &__money {
             &--1 {
@@ -8,6 +14,11 @@
     }
 }
 @media screen and ( max-width:  1500px) {
+    .review {
+        &__but {
+            width: 400px;
+        }
+    }
     .comparison {
         &__img {
             width: 400px;
@@ -29,6 +40,11 @@
     }
 }
 @media screen and ( max-width:  1400px) {
+    .footer {
+        &__logo {
+            width: 200px;
+        }
+    }
     .faq {
         &__container {
             background-size: 600px;
@@ -49,6 +65,16 @@
     }
 }
 @media screen and ( max-width:  1350px) {
+    .review {
+        &__but {
+            display: none;
+            &--mob {
+                display: block;
+                right: 10px;
+                bottom: 0px;
+            }
+        }
+    }
     .comparison {
         &__img {
             width: 300px;
@@ -63,6 +89,50 @@
     
 }
 @media screen and ( max-width:  1250px) {
+    .footer {
+        padding-bottom: 70px;
+        padding-top: 40px;
+        &__address {
+            &__text {
+                font-size: 14px;
+            }
+        }
+        &__date {
+            &__text {
+                font-size: 14px;
+                &:first-of-type {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__info {
+            &__text {
+                font-size: 14px;
+            }
+        }
+        &__link {
+            margin-right: 10px;
+        }
+        &__logo {
+            width: 150px;
+        }
+    }
+    .review {
+        padding-bottom: 80px;
+        &__card {
+            width: 300px;
+            height: 280px;
+            &__wrap {
+                padding: 30px 30px 15px 15px;
+            }
+            &__name {
+                font-size: 16px;
+            }
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
     .faq {
         &__container {
             background-size: 500px;
@@ -374,6 +444,120 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        &__logo {
+            justify-self: center;
+            img {
+                &:first-of-type {
+                    display: none;
+                }
+                &:last-of-type {
+                    display: block;
+                }
+            }
+        }
+        &__address {
+            max-width: 120px;
+        }
+        &__info {
+            justify-self: center;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid #474747;
+            width: 100%;
+            &__text {
+                text-align: center;
+                &:first-of-type {
+                    padding-left: 0;
+                    border-bottom: none;
+                }
+            }
+        }
+        &__link {
+            margin-right: 0;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &__address {
+            &__text {
+                br {
+                    display: block;
+                }
+            }
+        }
+        &__nav {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-self: end;
+        }
+        &__container {
+            grid-template: repeat(4, auto) / auto auto;
+            column-gap: 100px;
+            row-gap: 20px;
+            grid-template-areas: 
+                'footerLogo footerLogo'
+                'footerNav footerDate'
+                'footerNav footerAddress'
+                'footerInfo footerInfo'
+            ;
+        }
+    }
+    .review {
+        padding-bottom: 30px;
+        &__inner {
+            padding-right: 20px;
+            width: 755px;
+        }
+        &__but {
+            &--mob {
+                bottom: -90px;
+            }
+        }
+        &__hand {
+            display: block;
+            right: 0;
+            top: -10px;
+        }
+        &__money {
+            display: none;
+            &--mob {
+                display: block;
+                top: 40px;
+                left: 100px;
+            }
+        }
+        &__subtitle {
+            margin-bottom: 30px;
+        }
+        &__card {
+            padding: 0;
+            box-shadow: -5px 5px 10px rgba(194, 194, 194, 0.2), 
+                            5px -5px 10px rgba(194, 194, 194, 0.2), 
+                            -5px -5px 10px rgba(255, 255, 255, 0.9), 
+                            5px 5px 13px rgba(194, 194, 194, 0.9), 
+                            inset 1px 1px 2px rgba(255, 255, 255, 0.3), 
+                            inset -1px -1px 2px rgba(194, 194, 194, 0.5);
+            width: 225px;
+            min-width: 225px;
+            height: 245px;
+            &__wrap {
+                background: linear-gradient(135deg, #EDEDED 0%, #FFFFFF 100%);
+                box-shadow: none;
+                border: none;
+                padding: 35px 25px 15px 15px;
+            }
+            &__name {
+                font-size: 14px;
+            }
+            &__text {
+                font-size: 11px;
+            }
+        }
+    }
     .faq {
         &__item {
             padding-left: 15px;
@@ -800,6 +984,20 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .footer {
+        &__container {
+            column-gap: 25px;
+            grid-template-areas: 
+                'footerLogo .'
+                'footerNav footerDate'
+                'footerNav footerAddress'
+                'footerInfo footerInfo'
+            ;
+        }
+        &__logo {
+            justify-self: end;
+        }
+    }
     .faq {
         &__container {
             background-image: none;
