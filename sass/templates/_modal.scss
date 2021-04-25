@@ -1,0 +1,195 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 199;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+    }
+    &__invalid {
+        position: absolute;
+        color: tomato;
+        bottom: -20px;
+        left: 0px;
+    }
+    &__title {
+        font-family: 'Roboto-Bold';
+        font-style: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #474747;
+        margin-bottom: 25px;
+    }
+    &__button {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    &__label {
+        font-family: 'RobotoCondensed-300';
+        font-style: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #2F2F2F;
+        position: relative;
+        width: 100%;
+        padding-left: 20px;
+        cursor: pointer;
+        display: block;
+    }
+    &__ok {
+        width: 13px;
+        height: 13px;
+        box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.49);
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__check {
+        display: none;
+        &:checked + .modal__ok {
+            background-image: url(../img/ok.png);
+        }
+    }
+    &__input-group {
+        position: relative;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    &__input {
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), 
+                    -1px -1px 2px rgba(189, 189, 189, 0.5), 
+                    inset -1px 1px 2px rgba(189, 189, 189, 0.2), 
+                    inset 1px -1px 2px rgba(189, 189, 189, 0.2), 
+                    inset -1px -1px 2px rgba(255, 255, 255, 0.9), 
+                    inset 1px 1px 3px rgba(189, 189, 189, 0.9);
+        border-radius: 10px;
+        border: none;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: #888888;
+        padding: 17px 17px 17px 37px;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__dialog {
+        background: rgba(249, 249, 249, 0.97);
+        box-shadow: -5px -5px 15px #FFFFFF, 5px 5px 15px #AFAFAF;
+        border-radius: 20px;
+        padding: 50px 35px;
+        width: 390px;
+        position: relative;
+    }
+    &__close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-family: 'Roboto-Bold';
+        font-style: normal;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #474747;
+        cursor: pointer;
+    }
+    &-success {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 199;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+            animation-name: fadeIn;
+            animation-duration: 0.5s;
+        }
+        &__close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-family: 'Roboto-Bold';
+            font-style: normal;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #474747;
+            cursor: pointer;
+        }
+        &__dialog {
+            width: 390px;
+            height: 450px;
+            background: rgba(249, 249, 249, 0.97);
+            box-shadow: -5px -5px 15px #FFFFFF, 5px 5px 15px #AFAFAF;
+            border-radius: 20px;
+            position: relative;
+            padding: 10px;
+        }
+        &__title {
+            font-family: 'Roboto-Bold';
+            font-style: normal;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #85B657;
+            margin-bottom: 15px;
+        }
+        &__text {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-size: 16px;
+            line-height: 21px;
+            text-align: center;
+            color: #2F2F2F
+        }
+        &__wrap {
+            padding-top: 100px;
+            background: rgba(249, 249, 249, 0.97);
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/img.png);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 95%;
+        }
+    }
+}

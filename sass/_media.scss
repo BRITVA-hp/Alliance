@@ -1,4 +1,9 @@
 @media screen and ( max-width:  1750px) {
+    .calc {
+        background-position: center;
+        padding-top: 100px;
+        margin-top: 0;
+    }
     .review {
         &__but {
             width: 500px;
@@ -89,6 +94,51 @@
     
 }
 @media screen and ( max-width:  1250px) {
+    .calc {
+        &__button {
+            font-size: 16px;
+            padding-left: 60px;
+        }
+        &__box {
+            max-width: 580px;
+            &__rate {
+                font-size: 12px;
+                height: 60px;
+                span {
+                    &:last-of-type {
+                        font-size: 24px;
+                    }
+                }
+            }
+            &__result {
+                font-size: 25px;
+                height: 60px;
+            }
+            &__title {
+                font-size: 25px;
+            }
+            &__item {
+                font-size: 18px;
+                width: 100px;
+                height: 60px;
+            }
+            &__label {
+                font-size: 18px;
+            }
+            &__bucket {
+                padding: 16px;
+            }
+            &__input {
+                font-size: 22px;
+            }
+        }
+        &__percent {
+            font-size: 20px;
+            span {
+                font-size: 24px;
+            }
+        }
+    }
     .footer {
         padding-bottom: 70px;
         padding-top: 40px;
@@ -444,6 +494,72 @@
     }
 }
 @media screen and ( max-width:  992px) {
+    .calc {
+        &__button-wrap {
+            img {
+                display: none;
+            }
+        }
+        &__button {
+            font-size: 14px;
+            padding: 14px 50px;
+        }
+        &__box {
+            max-width: 485px;
+            &__row {
+                margin-bottom: 20px;
+            }
+            &__result {
+                height: 46px;
+            }
+            &__rate {
+                height: 46px;
+                span {
+                    &:first-of-type {
+                        max-width: 70px;
+                    }
+                }
+            }
+            &__title {
+                font-size: 22px;
+                margin-bottom: 8px;
+            }
+            &__info {
+                font-size: 11px;
+                margin-bottom: 15px;
+            }
+            &__wrap {
+                grid-gap: 15px;
+                margin-bottom: 15px;
+            }
+            &__item {
+                font-size: 14px;
+                width: 85px;
+                height: 50px;
+            }
+            &__bucket {
+                padding: 12px;
+            }
+            &__input {
+                font-size: 20px;
+            }
+            &__label {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+        &__subtitle {
+            margin-bottom: 15px;
+        }
+        &__percent {
+            font-size: 13px;
+            padding: 9px 30px;
+            margin-bottom: 15px;
+            span {
+                font-size: 18px;
+            }
+        }
+    }
     .footer {
         padding-top: 30px;
         padding-bottom: 40px;
@@ -813,6 +929,9 @@
     .header {
         padding-left: 0;
         padding-right: 0;
+        &__menu {
+            display: flex;
+        }
         &__title {
             color: #85B657;
         }
@@ -984,6 +1103,59 @@
     }
 }
 @media screen and ( max-width:  575px) {
+    .calc {
+        position: relative;
+        background-image: url(../img/calc/img.png);
+        background-size: auto;
+        background-position-x: right;
+        background-position-y: 350px;
+        padding-top: 50px;
+        &__money {
+            display: block;
+            right: 0;
+            top: 50px;
+        }
+        &__button {
+            margin-bottom: 15px;
+        }
+        &__box {
+            &__info {
+                display: none;
+                &--mobile {
+                    display: block;
+                    text-align: center;
+                }
+            }
+            &__row {
+                &--mobile {
+                    display: flex;
+                }
+            }
+            &__rate {
+                display: none;
+                &--mobile {
+                    display: flex;
+                }
+            }
+            &__wrap {
+                display: none;
+            }
+        }
+    }
+    .modal {
+        &-success {
+            &__dialog {
+                width: 320px;
+                height: 400px;
+            }
+            &__wrap {
+                padding-top: 60px;
+            }
+        }
+        &__dialog {
+            width: 320px;
+        }
+    }
     .footer {
         &__container {
             column-gap: 25px;
@@ -1126,6 +1298,17 @@
     .header {
         &__title {
             font-size: 14px;
+        }
+    }
+}
+
+@media screen and ( max-height:  450px) {
+    .modal {
+        align-items: flex-start;
+        overflow: auto;
+        &-success {
+            align-items: flex-start;
+            overflow: auto;
         }
     }
 }

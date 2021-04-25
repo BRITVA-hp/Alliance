@@ -10,20 +10,30 @@
 <body>
 
     <header class="header section">
-        <div class="container--big">
+        <div class="header__container container--big">
             <div class="header__row--top row--center">
                 <a href="./index.html" class="header__logo header__logo--desc"><img src="img/logo.png" alt="alliance"></a>
                 <h4 class="header__title">Помощь в получении кредита в Челябинске</h4>
                 <a class="header__tel text-hover" href="tel:88008008080">8 800 800 80 80</a>
             </div>
             <nav class="row--center header__row--bot">
+
+                <div class="header__menu">
+                    <a href="#" class="header__menu__link">Преимущества</a>
+                    <a href="#" class="header__menu__link">Условия</a>
+                    <a href="#" class="header__menu__link">О компании</a>
+                    <a href="#" class="header__menu__link">FAQ</a>
+                    <a href="#" class="header__menu__link">Отзывы</a>
+                    <a href="#" class="header__menu__link">Как получить</a>
+                </div>
+
                 <a href="./index.html" class="header__logo header__logo--mobile"><img src="img/logoMini.png" alt="alliance"></a>
-                <a href="" class="header__link">Преимущества</a>
-                <a href="" class="header__link">Условия</a>
-                <a href="" class="header__link">О компании</a>
-                <a href="" class="header__link">Как получить</a>
-                <a href="" class="header__link">FAQ</a>
-                <a href="" class="header__link">Отзывы</a>
+                <a href="#" class="header__link">Преимущества</a>
+                <a href="#" class="header__link">Условия</a>
+                <a href="#" class="header__link">О компании</a>
+                <a href="#" class="header__link">Как получить</a>
+                <a href="#" class="header__link">FAQ</a>
+                <a href="#" class="header__link">Отзывы</a>
                 <div class="header__burger">
                     <div class="header__burger__line"></div>
                     <div class="header__burger__line"></div>
@@ -54,9 +64,9 @@
                     <li class="main__li"><img src="img/main/ok.png" alt="ok"><span>Выдаем кредиты абсолютно на любые цели</span></li>
                 </ul>
                 <div class="main__button-wrap">
-                    <button class="button main__button">подать заявку</button>
+                    <button data-modal class="button main__button">подать заявку</button>
                     <img class="main__button__money" src="img/main/moneyBtn.png" alt="money">
-                    <div class="main__tel"><img src="./img/main/tel.png" alt="phone"></div>
+                    <a href="tel:88008008080" class="main__tel"><img src="./img/main/tel.png" alt="phone"></a>
                 </div>
             </div>
 
@@ -159,7 +169,7 @@
                         <h3 class="section__title help__title">в получении кредита?</h3>
                         <p class="help__text">Мы поможем получить положительный ответ от банка по ставке <span class="text--green">от 4%.</span></p>
                         <p class="help__text help__text--last">Ваша кредитная история <span class="text--green">не важна!</span></p>
-                        <div class="help__tel"><p class="help__tel__text">Жмите <span class="text-hover">“Подать заявку”</span> или </p><a class="help__tel__img" href="tel:88008008080"><img src="img/help/tel.png" alt="tel"></a></div>
+                        <div class="help__tel"><p class="help__tel__text">Жмите <span data-modal class="text-hover">“Подать заявку”</span> или </p><a class="help__tel__img" href="tel:88008008080"><img src="img/help/tel.png" alt="tel"></a></div>
                     </div>
                     <img src="img/help/img.png" alt="money" class="help__box__img">
                 </div>
@@ -326,6 +336,74 @@
 
         </section>
         <!-- /.section step -->
+
+        <section class="section calc">
+            <img class="calc__money" src="img/calc/money.png" alt="money">
+
+            <div class="container">
+                <h3 class="section__title calc__title">Узнайте ежемесячный</h3>
+                <h4 class="section__subtitle calc__subtitle">платеж в два клика</h4>
+
+                <div class="calc__box">
+
+                    <p class="calc__percent">Процент одобрения кредита: <span>95%</span></p>
+                    <div class="calc__box__input-group">
+                        <label class="calc__box__label" for="calcSum">Сумма кредита</label>
+                        <input value="100 000" id="calcSum" type="text" class="calc__box__bucket calc__box__input">
+                    </div>
+    
+                    <p class="calc__box__label">Выберите срок</p>
+                    <div class="calc__box__wrap">
+                        <div data-period="1" class="calc__box__item calc__box__item--active"><span>1 год</span></div>
+                        <div data-period="2" class="calc__box__item"><span>2 года</span></div>
+                        <div data-period="3" class="calc__box__item"><span>3 года</span></div>
+                        <div data-period="4" class="calc__box__item"><span>4 года</span></div>
+                        <div data-period="5" class="calc__box__item"><span>5 лет</span></div>
+                        <div data-period="6" class="calc__box__item"><span>6 лет</span></div>
+                        <div data-period="7" class="calc__box__item"><span>7 лет</span></div>
+                        <div data-period="8" class="calc__box__item"><span>8 лет</span></div>
+                        <div data-period="9" class="calc__box__item"><span>9 лет</span></div>
+                        <div data-period="10" class="calc__box__item"><span>10 лет</span></div>
+                    </div>
+
+                    <div class="calc__box__row--mobile row--jstart">
+                        <select name="calcSelect" id="calcSelect" class="calc__box__select">
+                            <option value="1">1 год</option>
+                            <option value="2">2 года</option>
+                            <option value="3">3 года</option>
+                            <option value="4">4 года</option>
+                            <option value="5">5 лет</option>
+                            <option value="6">6 лет</option>
+                            <option value="7">7 лет</option>
+                            <option value="8">8 лет</option>
+                            <option value="9">9 лет</option>
+                            <option value="10">10 лет</option>
+                          </select>
+                        <div class="calc__box__bucket calc__box__rate calc__box__rate--mobile">
+                            <span>Процентная ставка</span>
+                            <span>4%</span>
+                        </div>
+                    </div>
+
+                    <p class="calc__box__info">Расчет калькулятора произведен по ставкам, действующим при условии оформления финансовой защиты к кредиту. Не является публичной офертой.</p>
+                    <p class="calc__box__title">Наше предложение</p>
+                    <p class="calc__box__label">Ежемесячный платеж</p>
+                    <div class="calc__box__row row--jstart">
+                        <div class="calc__box__bucket calc__box__result"><span>8515</span><span>₽</span></div>
+                        <div class="calc__box__bucket calc__box__rate">
+                            <span>Процентная ставка</span>
+                            <span>4%</span>
+                        </div>
+                    </div>
+                    <div class="calc__button-wrap">
+                        <button data-modal class="button calc__button">рассчитать кредит</button>
+                        <img src="img/calc/moneyButton.png" alt="money">
+                    </div>
+                    <p class="calc__box__info calc__box__info--mobile">Расчет калькулятора произведен по ставкам, действующим при условии оформления финансовой защиты к кредиту. Не является публичной офертой.</p>
+                </div>
+            </div>
+        </section>
+        <!-- /.section calc -->
 
         <section class="section we">
             <img src="img/we/but.png" alt="butterfly" class="we__but">
@@ -636,6 +714,36 @@
 
     </footer>
     <!-- /.footer section -->
+
+    <div class="modal">
+
+        <form action="#" class="modal__dialog">
+            <p class="modal__close">&#10006;</p>
+            <p class="modal__title">Заполните заявку</p>
+            <div class="modal__input-group">
+                <input placeholder="Ваше имя" type="text" name="modalName" class="modal__input">
+                <span class="modal__invalid">Обязательное поле</span>
+            </div>
+            <div class="modal__input-group">
+                <input placeholder="+7 (___) ___ - __ - __" type="tel" name="modalTel" class="modal__input">
+                <span class="modal__invalid">Обязательное поле</span>
+            </div>
+            <button class="button modal__button">подать заявку</button>
+            <label for="modalCheck" class="modal__label"><span>Нажимая кнопку «Подать заявку», Вы даете согласие на обработку персональных данных</span><input id="modalCheck" name="modalCheck" checked type="checkbox" class="modal__check"><span class="modal__ok"></span>
+            </label>
+        </form>
+
+    </div>
+
+    <div class="modal-success">
+        <div class="modal-success__dialog">
+            <p class="modal-success__close">&#10006;</p>
+            <div class="modal-success__wrap">
+                <p class="modal-success__title">Заявка <br>отправлена!</p>
+                <p class="modal-success__text">Наш менеджер свяжится с Вами <br>в ближайшие 15 минут</p>
+            </div>
+        </div>
+    </div>
     
     <script src="js/script.js"></script>
 </body>

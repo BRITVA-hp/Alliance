@@ -24,6 +24,21 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        &--active {
+            .header__burger__line {
+                &:first-of-type {
+                    transform: rotate(-45deg);
+                    transform-origin: right top;
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:last-of-type {
+                    transform: rotate(45deg);
+                    transform-origin: right bottom;
+                }
+            }
+        }
         &__line {
             width: 100%;
             height: 3px;
@@ -57,6 +72,7 @@
                         inset 1px -1px 2px rgba(207, 207, 207, 0.5);
             border-radius: 10px;
             padding: 24px 155px;
+            position: relative;
         }
     }
     &__title {
@@ -72,5 +88,40 @@
         font-size: 24px;
         line-height: 130%;
         color: #474747;
+    }
+    &__menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 6;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: -1px 1px 2px rgba(174, 174, 174, 0.2), 
+                    1px -1px 2px rgba(174, 174, 174, 0.2), 
+                    -1px -1px 2px rgba(255, 255, 255, 0.9), 
+                    1px 1px 3px rgba(174, 174, 174, 0.9), 
+                    inset 1px 1px 2px rgba(255, 255, 255, 0.3), 
+                    inset -1px -1px 2px rgba(174, 174, 174, 0.5);
+        transition: 0.3s;
+        max-width: 0;
+        padding: 35px 0;
+        overflow: hidden;
+        &--active {
+            max-width: none;
+            padding: 35px 35px 35px 60px;
+        }
+        &__link {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-size: 16px;
+            line-height: 130%;
+            color: #474747;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 }

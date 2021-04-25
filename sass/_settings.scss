@@ -17,6 +17,20 @@ ul {
     list-style-type: none;
 }
 
+input {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+select {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
 .pos-abs {
     position: absolute;
 }
