@@ -1037,6 +1037,8 @@ a {
       line-height: 110%;
       color: #474747;
       margin-bottom: 30px; }
+      .calc__box__info--mobile {
+        display: none; }
     .calc__box__wrap {
       display: grid;
       grid-template: 1fr 1fr/repeat(5, 1fr);

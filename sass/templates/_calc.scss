@@ -126,6 +126,9 @@
             line-height: 110%;
             color: #474747;
             margin-bottom: 30px;
+            &--mobile {
+                display: none;
+            }
         }
         &__wrap {
                 display: grid;
